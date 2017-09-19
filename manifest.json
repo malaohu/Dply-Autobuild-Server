@@ -1,0 +1,24 @@
+﻿{
+	"manifest_version": 2,
+	"name": "Dply.co自动创建服务器",
+	"description": "利用Dply.co免费2小时的优势，刷一些脚本！！！",
+	"version": "0.0.1",
+	"icons": { "16": "img/16.png",
+           "48": "img/48.png",
+          "128": "img/128.png" },
+	"permissions": ["tabs","https://dply.co/*"],
+	"content_scripts": [
+	    {
+	      "matches": ["https://dply.co/*"],
+	      "js": ["jquery.js","dply.js"]
+	    }
+	 ],
+	"browser_action": {
+	    "default_icon": "img/48.png" ,
+	    "default_title": "Dply.co自动创建服务器",
+	    "default_popup": "popup.html"
+	  },
+	"background": {
+		"page": "backgroud.html"
+	}
+}

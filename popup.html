@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>Dply.co自动创建服务器</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body style="width: 650px; height: 650px;">
+<div class="form">
+<label>详细教程说明：<a href="http://51.ruyo.net/p/5437.html?from=chrome">http://51.ruyo.net/p/5437.html</a></label>
+
+<div class="form-group">
+    <label>操作系统</label>
+   <select name="os" id="os" class="form-control">
+              <option value="" disabled="" selected="">选择操作系统</option>
+
+              <option value="centos-6-x64">CentOS 6</option>
+
+              <option value="centos-7-x64">CentOS 7</option>
+
+              <option value="coreos-stable">CoreOS (stable)</option>
+
+              <option value="debian-7-0-x64">Debian 7</option>
+
+              <option value="debian-8-x64">Debian 8</option>
+
+              <option value="fedora-25-x64">Fedora 25</option>
+
+              <option value="fedora-25-x64-atomic">Fedora 25 (Atomic)</option>
+
+              <option value="fedora-26-x64">Fedora 26</option>
+
+              <option value="fedora-26-x64-atomic">Fedora 26 (Atomic)</option>
+
+              <option value="freebsd-11-0-x64">FreeBSD 11</option>
+
+              <option value="ubuntu-14-04-x64">Ubuntu 14.04</option>
+
+              <option value="ubuntu-16-04-x64">Ubuntu 16.04</option>
+
+              <option value="ubuntu-17-04-x64">Ubuntu 17.04</option>
+
+              <option value="" disabled="">-- Application Images --</option>
+
+              <option value="ruby-on-rails-16-04">Ubuntu 14.04 (Ruby on Rails)</option>
+
+              <option value="django-16-04">Ubuntu 16.04 (Django)</option>
+
+              <option value="docker-16-04">Ubuntu 16.04 (Docker)</option>
+
+              <option value="lamp-16-04">Ubuntu 16.04 (LAMP)</option>
+
+              <option value="lemp-16-04">Ubuntu 16.04 (LEMP)</option>
+
+              <option value="mean-16-04">Ubuntu 16.04 (MEAN Stack)</option></select></div>
+
+<div class="form-group">
+  <label >数据中心</label>
+	<select name="region" id="region" class="form-control">
+	<option value="" disabled="" selected="">选择数据中心</option>
+	<option value="sfo1">旧金山（美国）</option>
+	<option value="tor1">多伦多（加拿大）</option>
+	<option value="nyc1">纽约（美国）</option>
+	<option value="lon1">伦敦（英国）</option>
+	<option value="fra1">法兰克福（德国）</option>
+	<option value="blr1">班加罗尔（印度）</option>
+	<option value="sgp1">新加坡（东南亚国家）</option>
+	</select>
+ </div>
+
+<div class="form-group">
+    <label >初始化脚本</label>
+<textarea id="scrip" class="form-control" rows="7" placeholder="
+这里可以粘贴User-Data Script！
+该脚本会找创建机器的时候自动执行！
+脚本头部 #!/bin/sh 必须有！
+更多脚本请参考：http://51.ruyo.net/p/3420.html#11
+User-Data Script官方介绍：https://dply.co/help/cloud-init
+"></textarea>
+ </div>
+ <div class="form-group">
+    <label >SSH KEY</label>
+<textarea id="sshkey" class="form-control" rows="7"  placeholder="
+SSH KEY
+"></textarea>
+ </div>
+    <button id="doit" class="btn btn-success">！！保存数据</button>
+</div>
+    <script src="jquery.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>
