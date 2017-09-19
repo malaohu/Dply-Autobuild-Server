@@ -1,7 +1,7 @@
 ﻿{
 	"manifest_version": 2,
 	"name": "Dply.co自动创建服务器",
-	"description": "利用Dply.co免费2小时的优势，刷一些脚本！！！",
+	"description": "利用Dply.co免费2小时的优势，刷一些脚本！！！更多内容：http://51.RUYO.net",
 	"version": "0.0.1",
 	"icons": { "16": "img/16.png",
            "48": "img/48.png",
